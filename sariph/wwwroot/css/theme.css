@@ -1,0 +1,103 @@
+/* BEGIN general styles */
+
+html
+{
+    background-color: #080808;
+    overflow-x: hidden;
+    
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-weight: normal;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* END general styles */
+/* -- BEGIN: Content styles -- */
+
+.tile.hide-name
+{
+    -moz-transition: color 0.8s;
+    -webkit-transition: color 0.8s;
+    -o-transition: color 0.8s;
+    transition: color 0.8s;
+    
+    color: transparent;
+}
+
+.tile:hover, .tile:active
+{
+    text-decoration: none;
+    color: white;
+}
+
+.tile-group .tile.citrine
+{
+    background-color: forestgreen;
+}
+
+.tile-group .tile.wardrobe
+{
+    background-color: goldenrod;
+    background-image: url('../Images/Wardrobe.png');
+}
+
+.tile-group .tile.passkeep
+{
+    background-color: #3D0087;
+    background-image: url('../Images/KeepItSafe_Logo.png');
+}
+
+.tile-group .tile.sariph
+{
+    background-color: dimgray;
+}
+
+.tile-group .tile.email
+{
+    background-color: goldenrod;
+}
+
+.tile-group .tile.facebook
+{
+    background-color: #2a518f;
+    background-image: url('../Images/facebook.svg');
+}
+
+.tile-group .tile.twitter
+{
+    background-image: url('../Images/twitter-white-on-blue.svg');
+}
+
+.tile-group .tile.linkedin
+{
+    background-image: url('../Images/LinkedIn_IN_Icon_55px.png');
+    background-size: 55px;
+}
+
+.disclaimer
+{
+    font-size: smaller;
+    color: dimgray;
+}
+
+.project-list h3
+{
+    font-weight: bold;
+}
+
+/* END content styles */

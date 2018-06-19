@@ -1,0 +1,129 @@
+﻿/* This handles easing in the main content of each page
+ * from the right and fading in. */
+#content-frame.entering
+{
+    -moz-animation: left-slide-in 0.9s;
+    -webkit-animation: left-slide-in 0.9s;
+    -o-animation: left-slide-in 0.9s;
+    animation: left-slide-in 0.9s;
+}
+
+#content-frame.exiting
+{
+    -moz-animation: left-flip-out 0.7s ease-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation: left-flip-out 0.7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: left-flip-out 0.7s ease-out;
+    -o-animation-fill-mode: forwards;
+    animation: left-flip-out 0.7s ease-out;
+    animation-fill-mode: forwards;
+}
+
+/* BEGIN left-slide-in */
+@-moz-keyframes left-slide-in
+{
+    0%
+    {
+        -moz-transform: translateX(1.5em);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes left-slide-in
+{
+    0%
+    {
+        -webkit-transform: translateX(1.5em);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes left-slide-in
+{
+    0%
+    {
+        -o-transform: translateX(1.5em);
+        opacity: 0;
+    }
+}
+
+@keyframes left-slide-in
+{
+    0%
+    {
+        transform: translateX(1.5em);
+        opacity: 0;
+    }
+}
+/* END left-slide-in */
+/* BEGIN left-slide-in */
+@-moz-keyframes left-flip-out
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    100%
+    {
+        opacity: 0;
+        -moz-transform-origin: left center;
+        -moz-transform: rotatey(-90deg) perspective(1000px);
+    }
+}
+
+@-webkit-keyframes left-flip-out
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    100%
+    {
+        opacity: 0;
+        -webkit-transform-origin: left center;
+        -webkit-transform: rotatey(-90deg) perspective(1000px);
+    }
+}
+
+@-o-keyframes left-flip-out
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    100%
+    {
+        opacity: 0;
+        -o-transform-origin: left center;
+        -o-transform: rotatey(-90deg) perspective(1000px);
+    }
+}
+
+@keyframes left-flip-out
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    100%
+    {
+        opacity: 0;
+        transform-origin: left center;
+        transform: rotatey(-90deg) perspective(1000px);
+    }
+}
+/* END left-flip-out */
+
+/* This handles a short transition when clicking a tile */
+.tile.transitioning
+{
+    -moz-transition: -moz-transform 0.1s;
+    -webkit-transition:  -webkit-transform 0.1s;
+    -o-transition:  -o-transform 0.1s;
+    transition:  transform 0.1s;
+}

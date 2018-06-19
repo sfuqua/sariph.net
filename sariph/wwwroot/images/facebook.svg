@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="140pt" viewBox="0 0 140 140" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="Clip0">
+   <path d="M0 0 L0 140 L140 140 L140 0 L0 0 Z" transform="translate(0, 0)"/>
+  </clipPath>
+ </defs>
+ <g id="Background">
+  <g id="Group1" clip-path="url(#Clip0)">
+   <path style="fill:#2a518f; fill-rule:nonzero;stroke:none;" d="M140 132 C140 136.398 136.398 140 132 140 L8 140 C3.60156 140 0 136.398 0 132 L0 8 C0 3.60156 3.60156 0 8 0 L132 0 C136.398 0 140 3.60156 140 8 L140 132 Z" transform="translate(0, 0)"/>
+   <path style="fill:#6a87b3; fill-rule:nonzero;stroke:none;" d="M120 20 L0 20 L0 0 L120 0 L120 20 Z" transform="translate(10, 110)"/>
+   <path style="fill:#ffffff; fill-rule:nonzero;stroke:none;" d="M13.6094 109.688 L13.6094 58.2188 L0 58.2188 L0 39.6875 L13.6094 39.6875 C13.6094 39.6875 13.6094 32.0938 13.6094 23.8594 C13.6094 11.4219 21.6485 0 40.1724 0 C47.6724 0 53.2184 0.7188 53.2184 0.7188 L52.7814 18.0234 C52.7814 18.0234 47.1254 17.9688 40.9534 17.9688 C34.2734 17.9688 33.2032 21.0469 33.2032 26.1563 C33.2032 30.1953 33.2032 17.5469 33.2032 39.6875 L53.3124 39.6875 L52.4374 58.2188 L33.2032 58.2188 L33.2032 109.688 L13.6094 109.688 Z" transform="translate(66.3906, 20.3125)"/>
+  </g>
+ </g>
+</svg>

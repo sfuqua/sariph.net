@@ -1,0 +1,78 @@
+﻿/* BEGIN tiles */
+/* BEGIN tile groups */
+
+.tile-group
+{
+    display: block;
+    
+    max-width: 24rem;
+    height: 100%;
+    
+    margin: 0.75rem;
+    padding: 0 1rem 0 1rem;
+}
+
+/* END tile groups */
+
+.tile-group .tile
+{
+    display: block;
+    
+    font-size: 80%;
+    height: 8.5rem;
+    width: 8.5rem;
+    overflow: hidden;
+    
+    background-color: gray;
+    background-clip: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    border: solid rgba(0, 0, 0, 0.5) 2px;
+    
+    margin: 2px;
+    padding: 0.75rem;
+}
+
+.tile-group .tile:hover, .tile-group .tile:active
+{
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* END tiles */
+/* BEGIN back button */
+
+.back-button
+{
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    color: transparent;
+    
+    background-image: url('../Images/back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    border-radius: 50%;
+    border: solid white 2px;
+}
+
+.back-button:hover
+{
+    background-color: dimgray;
+}
+
+.back-button:active
+{
+    background-color: gray;
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/* END back button */
