@@ -100,7 +100,7 @@
         );
     }
 
-    var historyClickHandler = function(e) {
+    var historyClickHandler = function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -135,7 +135,7 @@
                         return;
                     }
 
-                    link.addEventListener('click', historyClickHandler);
+                    //link.addEventListener('click', historyClickHandler);
                 }
             );
     };

@@ -1,0 +1,15 @@
+﻿@{
+    /*if (!Request.IsAjaxRequest())
+    {
+        Layout = "~/Views/Shared/SiteLayout.cshtml";
+    }*/
+    Layout = "SiteLayout";
+}        
+        
+        <div>
+            <a class="back-button" href="~/">Home</a>
+            <h1 class="page-title">@ViewData["Title"]</h1>
+        </div>
+        <div id="inner-content">
+            @RenderBody()
+        </div>

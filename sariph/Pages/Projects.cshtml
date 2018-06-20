@@ -1,0 +1,47 @@
+﻿@page "{id}"
+@model sariph.Pages.ProjectsModel
+@{
+    Layout = "ContentLayout";
+    ViewData["Title"] = $"Project: {@Model.Project.Name}";
+}
+
+<hgroup>
+    @if (!string.IsNullOrWhiteSpace(Model.Project.DetailsUrl))
+    {
+        <h2>
+            <strong>Project page: </strong><a href="@Model.Project.DetailsUrl">@Model.Project.DetailsText</a>
+        </h2>
+    }
+</hgroup>
+
+@foreach (string paragraph in
+   Model.Project.Description.Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+{
+    <p>@Html.Raw(paragraph)</p>
+}
+
+@if (Model.Project.Technologies?.Any() == true)
+{
+    <div class="project-list">
+        <h3>Technology Leveraged</h3>
+        <ul>
+            @foreach (string tech in Model.Project.Technologies)
+            {
+                <li>@tech</li>
+            }
+        </ul>
+    </div>
+}
+
+@if (Model.Project.Challenges?.Any() == true)
+{
+    <div class="project-list">
+        <h3>Challenges Faced</h3>
+        <ul>
+            @foreach (string challenge in Model.Project.Challenges)
+            {
+                <li>@challenge</li>
+            }
+        </ul>
+    </div>
+}

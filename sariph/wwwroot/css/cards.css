@@ -1,0 +1,250 @@
+﻿/* This stylesheet handles representing standard playing cards. */
+
+/* This selector represents the card itself */
+/* Cards should be placed in containers with specified widths */
+.sariph-playing-card {
+    position: relative;
+    border-radius: 5%;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-size: 20px;
+    line-height: 1;
+}
+
+    .sariph-playing-card:after {
+        padding-top: 140%; /* Ratio of 2.5in to 3.5in */
+        display: block;
+        content: '';
+    }
+
+    /* Layers are used to draw on top of the cards, for labels and glyphs */
+    .sariph-playing-card .layer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Colorize the red suits */
+    .sariph-playing-card.heart, .sariph-playing-card.diamond {
+        color: red;
+    }
+
+    /* Colorize the black suits */
+    .sariph-playing-card.spade, .sariph-playing-card.club {
+        color: black;
+    }
+
+    /* "glyphs" are the repeated symbols representing the cards' ranks */
+    .sariph-playing-card .glyph {
+        font-size: 300%;
+    }
+
+    /* The ace glyph is traditionally much larger than standard glyphs */
+    .sariph-playing-card.ace .glyph, .sariph-playing-card.jack .glyph, .sariph-playing-card.queen .glyph, .sariph-playing-card.king .glyph {
+        font-size: 600%;
+    }
+
+    /* There are multiple "glyphs" layers, used for columns of  glyphs */
+    /* Each column is spaced using flexbox */
+    .sariph-playing-card .layer.glyphs {
+        padding: 10%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+        .sariph-playing-card .layer.glyphs.left {
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+        }
+
+        .sariph-playing-card .layer.glyphs.center {
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .sariph-playing-card .layer.glyphs.right {
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+        }
+
+        /* Certain ranks need to be spaced such that the top and bottom glyphs are 
+ * flush with the top and bottom of the cards */
+        .sariph-playing-card .layer.glyphs.flush {
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+        }
+
+        /* Other ranks need to be spaced such that the top and bottom glyphs are spaced
+ * away from the top and bottom of the cards */
+        .sariph-playing-card .layer.glyphs.spaced {
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+        }
+
+    .sariph-playing-card .label {
+        text-align: center;
+    }
+
+    .sariph-playing-card.heart .glyph:before, .sariph-playing-card.heart .label:after {
+        content: "\2665";
+    }
+
+    .sariph-playing-card.spade .glyph:before, .sariph-playing-card.spade .label:after {
+        content: "\2660";
+    }
+
+    .sariph-playing-card.diamond .glyph:before, .sariph-playing-card.diamond .label:after {
+        content: "\2666";
+    }
+
+    .sariph-playing-card.club .glyph:before, .sariph-playing-card.club .label:after {
+        content: "\2663";
+    }
+
+    .sariph-playing-card.jack .glyph:before {
+        content: "J";
+    }
+
+    .sariph-playing-card.queen .glyph:before {
+        content: "Q";
+    }
+
+    .sariph-playing-card.king .glyph:before {
+        content: "K";
+    }
+
+    .sariph-playing-card.ace .label:before {
+        content: "A\A";
+        white-space: pre;
+    }
+
+
+    .sariph-playing-card.two .label:before {
+        content: "2\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.three .label:before {
+        content: "3\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.four .label:before {
+        content: "4\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.five .label:before {
+        content: "5\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.six .label:before {
+        content: "6\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.seven .label:before {
+        content: "7\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.eight .label:before {
+        content: "8\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.nine .label:before {
+        content: "9\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.ten .label:before {
+        content: "10\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.jack .label:before {
+        content: "J\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.queen .label:before {
+        content: "Q\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card.king .label:before {
+        content: "K\A";
+        white-space: pre;
+    }
+
+    .sariph-playing-card .upside-down {
+        transform: scaleY(-1) scaleX(-1);
+        -webkit-transform: scaleY(-1) scaleX(-1);
+    }
+
+    .sariph-playing-card .top-left {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    .sariph-playing-card .bottom-right {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+    }
+
+    .sariph-playing-card .face, .sariph-playing-card .back {
+        -webkit-perspective: 500px;
+        -moz-perspective: 500px;
+        perspective: 500px;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 1s;
+        -moz-transition: -moz-transform 1s;
+        transition: transform 1s;
+        border-radius: inherit;
+        border: solid black 1px;
+    }
+
+    .sariph-playing-card .face {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background-color: white;
+    }
+
+    .sariph-playing-card.facedown .face {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    .sariph-playing-card .back {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        background-image: radial-gradient(ellipse 33% 50% at 50% 50%, black 0%, black 50%, brown 50%);
+        border: solid orange 5px;
+        box-sizing: border-box;
+    }
+
+    .sariph-playing-card.facedown .back {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
